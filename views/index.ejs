@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% messages.forEach(function(message) { %>
+      <li>
+        <%= message.user %> : <%= message.text %>
+        <br>
+        <%= message.added %>
+      </li>
+
+
+    <% }); %>
+
+    <h1>Messge Form</h1>
+    <form action="/new" method="post">
+    <label for="name">name</label>
+    <input type="text" name = "name"> 
+    <label for="message">message</label>
+    <input type="text" name = "message"> 
+    <input type="submit">
+</form>
+    
+  </body>
+</html>
